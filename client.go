@@ -3,10 +3,13 @@
 package main
 
 import (
+	"fmt"
 	"flag"
 	"log"
 	"net/http"
 	"os"
+	"io/ioutil"
+
 	"github.com/gorilla/websocket"
 )
 
@@ -39,4 +42,6 @@ func upload(filename string) {
 		panic(err)
 	}
 	defer res.Body.Close()
+	message, _ := ioutil.ReadAll(res.Body)
+	fmt.Printf(string(message))
 }
