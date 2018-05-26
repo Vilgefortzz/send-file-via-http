@@ -2,6 +2,10 @@
 
 Sending files via websocket based on server-client
 
+Install Gorilla WebSocket:
+
+    $  go get github.com/gorilla/websocket
+
 To run the program, start the server:
 
     $ go run server.go
