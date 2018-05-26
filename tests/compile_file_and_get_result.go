@@ -1,4 +1,4 @@
-package test_compile_file_and_get_result
+package tests
 
 import (
 	"os/exec"
@@ -12,7 +12,7 @@ func compileFileAndGetResult(filename string) string{
 		err error
 	)
 	cmdName := "go"
-	cmdArgs := []string{"run", "../../get-files/"+filename}
+	cmdArgs := []string{"run", "../get-files/"+filename}
 	if cmdOut, err = exec.Command(cmdName, cmdArgs...).Output(); err != nil {
 		fmt.Fprintln(os.Stderr, "There was an error compiling go source file: ", err)
 		return "compiling error"

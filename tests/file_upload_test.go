@@ -1,4 +1,4 @@
-package test_upload_file
+package tests
 
 import (
 	"testing"

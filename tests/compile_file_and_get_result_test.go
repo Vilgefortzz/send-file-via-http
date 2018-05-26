@@ -1,4 +1,4 @@
-package test_compile_file_and_get_result
+package tests
 
 import (
 	"testing"

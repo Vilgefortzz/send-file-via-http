@@ -1,4 +1,4 @@
-package test_upload_file
+package tests
 
 import (
 	"os"
@@ -8,7 +8,7 @@ import (
 )
 
 func upload(filename string, hostName string) string {
-	file, err := os.Open("../../send-files/"+filename)
+	file, err := os.Open("../send-files/"+filename)
 	if err != nil {
 		return "file not found"
 	}

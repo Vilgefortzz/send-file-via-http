@@ -17,3 +17,7 @@ Next, start the client with passing arguments:
 arg1 - name of the file located in send-files directory (e.g. hello.go)
 
 arg2(optional) - host name (e.g. 127.0.0.1)
+
+To run tests from /tests (server must be running):
+
+    $ go test -v
