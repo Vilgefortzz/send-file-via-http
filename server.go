@@ -15,14 +15,20 @@ import (
 	"io"
 )
 
-var addr = flag.String("addr", "localhost:8080", "http service address")
-
 var upgrader = websocket.Upgrader{} // use default options
 const GO_EXTENSION string = ".go"
 
 func main() {
 	flag.Parse()
 	log.SetFlags(0)
+	var addr *string
+
+	if (flag.NArg() >= 1) {
+		hostName := flag.Args()[0]
+		addr = flag.String("addr", hostName+":8080", "http service address")
+	} else {
+		addr = flag.String("addr", "localhost:8080", "http service address")
+	}
 
 	http.HandleFunc("/upload", uploadHandler)
 
