@@ -1,6 +1,6 @@
-# send-file-via-websocket
+# send-file-via-http
 
-Sending files via websocket based on server-client
+Sending files via http based on server-client
 
 Install Gorilla WebSocket:
 
